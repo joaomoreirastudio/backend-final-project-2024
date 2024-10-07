@@ -6,7 +6,7 @@ const MovieSchema = new mongoose.Schema<IMovie>({
   releaseDate: { type: Date, required: true },
   trailerLink: { type: String, required: true },
   posterUrl: { type: String, default: 'no-image.png' },
-  genrers: { type: [String], required: true },
+  genres: { type: [String], required: true },
 });
 
 const MovieModel = mongoose.model<IMovie>('Movie', MovieSchema);

@@ -42,11 +42,11 @@ class MovieService {
       filter.$or = [
         { title: new RegExp(search, 'i') },
         { releaseDate: new RegExp(search, 'i') },
-        { genrers: new RegExp(search, 'i') },
+        { genres: new RegExp(search, 'i') },
       ];
     }
     if (genre) {
-      filter.genrers = genre;
+      filter.genres = genre;
     }
 
     const sort: { [key: string]: 'asc' | 'desc' } = { [sortBy]: order === 'asc' ? 'asc' : 'desc' };

@@ -33,7 +33,7 @@ const router = express.Router();
  *         - releaseDate
  *         - trailerLink
  *         - posterUrl
- *         - genrers
+ *         - genres
  *       properties:
  *         title:
  *           type: string
@@ -48,7 +48,7 @@ const router = express.Router();
  *         posterUrl:
  *           type: string
  *           description: The URL of the movie poster
- *         genrers:
+ *         genres:
  *           type: array
  *           items:
  *             type: string
@@ -58,7 +58,7 @@ const router = express.Router();
  *         releaseDate: 2010-07-16
  *         trailerLink: https://example.com/trailer
  *         posterUrl: https://example.com/poster.jpg
- *         genrers:
+ *         genres:
  *           - Sci-Fi
  *           - Thriller
  */

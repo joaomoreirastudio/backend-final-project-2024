@@ -16,7 +16,7 @@ export class MovieController {
 
   async createNewMovie(req: Request, res: Response, next: NextFunction) {
     try {
-      const { title, releaseDate, trailerLink, genrers } = req.body;
+      const { title, releaseDate, trailerLink, genres } = req.body;
       const posterUrl = req.files?.posterUrl;
 
       if (!posterUrl) {
@@ -29,7 +29,7 @@ export class MovieController {
         title,
         releaseDate,
         trailerLink,
-        genrers,
+        genres,
         posterUrl: `/static/${posterFileName}`,
       } as unknown as IMovie;
 
