@@ -2,7 +2,7 @@
 
 ## Description
 
-This is the final backend project for 2024. It is built using Node.js, Express, and TypeScript. The project includes user authentication, movie management, and integrates Swagger for API documentation.
+This is the final backend project for 2024. It is built using Node.js, bcrypt, Express, and TypeScript. The project includes user authentication, movie management, and integrates Swagger for API documentation.
 
 ## Project Structure
 
@@ -120,10 +120,20 @@ Swagger is used for API documentation. You can access the documentation at `/api
 ### Movies
 
 - **Create Movie**: `POST /api/movies`
+  - **Description**: Create a new movie.
+  - **Security**: Requires bearer token.
 - **Get Movies**: `GET /api/movies`
+  - **Description**: Retrieve a list of movies.
+  - **Security**: Public access.
 - **Get Movie by ID**: `GET /api/movies/:id`
+  - **Description**: Get a movie by ID.
+  - **Security**: Public access.
 - **Update Movie**: `PUT /api/movies/:id`
+  - **Description**: Update a movie.
+  - **Security**: Requires bearer token.
 - **Delete Movie**: `DELETE /api/movies/:id`
+  - **Description**: Delete a movie.
+  - **Security**: Requires bearer token.
 - **Search Movies**: `GET /api/movies/search`
   - **Description**: Search for movies based on query parameters.
   - **Parameters**:
